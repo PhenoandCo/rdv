@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://drive.google.com">
+    <title>PHENO&CO - Barbershop Montpellier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #111;
+            color: #E5E5E5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .header-section {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #E5E5E5;
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+        }
+        
+        .button-group {
+            margin-bottom: 30px;
+        }
+        
+        .button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 18px;
+            background-color: #FFD700;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .button:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            color: black;
+        }
+        
+        .button-secondary {
+            background-color: #333;
+            color: #FFD700;
+        }
+        
+        .button-secondary:hover {
+            background-color: #444;
+            color: #FFD700;
+        }
+        
+        .info-block {
+            background-color: #222;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            max-width: 600px;
+        }
+        
+        .horaires {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .modal-content {
+            background: #111;
+            color: #E5E5E5;
+            border: 2px solid #FFD700;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #FFD700;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 70vh;
+            border: none;
+        }
+        
+        .form-control {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #E5E5E5;
+            margin-bottom: 15px;
+        }
+        
+        .form-control:focus {
+            background-color: #444;
+            border-color: #FFD700;
+            color: #E5E5E5;
+            box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+        }
+        
+        .form-control::placeholder {
+            color: #AAA;
+        }
+        
+        .btn-warning {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .modal-xl-custom {
+            max-width: 80vw;
+            width: auto;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .button {
+                width: 90%;
+                padding: 20px 15px;
+                font-size: 14px;
+            }
+            iframe {
+                height: 75vh;
+            }
+        }
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .button {
+                width: 85%;
+                padding: 18px 15px;
+                font-size: 15px;
+            }
+            iframe {
+                height: 65vh;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .button-group-horizontal {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            .button-group-horizontal .button {
+                width: 300px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>PHENO&CO</h1>
+        <p class="subtitle">Barbershop depuis 2009 • Montpellier</p>
+    </div>
+
+    <h2 class="section-title">RÉSERVATIONS</h2>
+    <div class="button-group button-group-horizontal">
+        <a class="button" href="https://phenoandco.com" target="_blank">Prendre rendez-vous</a>
+        <button class="button" data-bs-toggle="modal" data-bs-target="#bookingModal">Réserver un fauteuil</button>
+        <a class="button button-secondary" href="https://wa.me/33769432605" target="_blank">Contact WhatsApp</a>
+    </div>
+
+    <h2 class="section-title">TARIFS & INFOS</h2>
+    <div class="button-group">
+        <button class="button button-secondary" data-bs-toggle="modal" data-bs-target="#driveModal" data-file-id="1IZ3KTp_7QyUNTPDMVC1aXBHRyDwovbaM">Tarifs & Prestations</button>
+        <button class="button button-secondary" data-bs-toggle="modal" data-bs-target="#driveModal" data-file-id="1lvF0hN3cbd97C6fTNxvU_VjGzpf7k3RK">Brochure Location Fauteuil</button>
+    </div>
+
+    <div class="info-block">
+        <p><strong>20 ans de passion, 15 ans à vos côtés.</strong><br>Merci pour votre confiance.</p>
+        
+        <div class="horaires">
+            <p><strong>Horaires :</strong></p>
+            <p>Mardi, Jeudi, Vendredi, Samedi : 10h - 18h<br>
+            Mercredi : 12h - 17h30<br>
+            Dimanche & Lundi : fermé</p>
+        </div>
+        
+        <p><strong>18 Rue d'Alger, 34000 Montpellier</strong></p>
+        
+        <p><em>Vous êtes toujours les bienvenus chez PHENO&CO, avec ou sans rendez-vous.<br>
+        Sachez-le : réserver = moins d'attente.</em></p>
+    </div>
+
+    <!-- Modal Google Drive -->
+    <div class="modal fade" id="driveModal" tabindex="-1">
+        <div class="modal-dialog modal-xl-custom modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Document</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="driveIframe" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Réservation Fauteuil -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+        <div class="modal-dialog modal-xl-custom modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Réservation de fauteuil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- FORMSPREE INTEGRATION: Remplacer YOUR_FORM_ID par votre ID Formspree -->
+                    <form action="https://formspree.io/f/mkgbzveo" method="POST" id="fauteuilBookingForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="nom" placeholder="Nom complet *" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email *" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" name="telephone" placeholder="Téléphone *" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date souhaitée *</label>
+                            <input type="date" class="form-control" name="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" name="duree" required>
+                                <option value="">Durée de location *</option>
+                                <option value="1h">À l'heure (10€/h)</option>
+                                <option value="demi-journee">Demi-journée 4h (50€)</option>
+                                <option value="journee">Journée (80€)</option>
+                                <option value="mensuel">Location mensuelle (75€/jour)</option>
+                                <option value="3mois">3 mois (70€/jour)</option>
+                                <option value="6mois">6 mois (60€/jour)</option>
+                                <option value="12mois">12 mois (55€/jour)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" name="pack">
+                                <option value="">Pack matériel (optionnel)</option>
+                                <option value="essentiel">Pack Essentiel (20€/jour)</option>
+                                <option value="premium">Pack Premium (30€/jour)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="3" placeholder="Message ou demandes spécifiques (optionnel)"></textarea>
+                        </div>
+                        <!-- Champ caché pour identifier le type de demande -->
+                        <input type="hidden" name="_subject" value="Nouvelle demande de réservation de fauteuil PHENO&CO">
+                        <!-- Page de redirection après soumission (optionnel) -->
+                        <input type="hidden" name="_next" value="https://votre-site.com/merci.html">
+                        
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Envoyer la demande</button>
+                        <small class="text-muted d-block mt-2">* Champs obligatoires</small>
+                    </form>
+                    <div id="bookingSuccess" class="alert alert-success mt-3 d-none">
+                        <strong>Demande envoyée !</strong><br>
+                        Nous vous contacterons rapidement pour confirmer votre réservation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestion modal Google Drive
+            const modal = document.getElementById('driveModal');
+            const iframe = document.getElementById('driveIframe');
+            const modalTitle = modal.querySelector('.modal-title');
+
+            modal.addEventListener('show.bs.modal', (e) => {
+                const button = e.relatedTarget;
+                const fileId = button.getAttribute('data-file-id');
+                const buttonText = button.textContent.trim();
+                iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+                modalTitle.textContent = buttonText;
+            });
+
+            modal.addEventListener('hidden.bs.modal', () => {
+                iframe.src = '';
+            });
+
+            // Gestion formulaire réservation fauteuil avec Formspree
+            document.getElementById('fauteuilBookingForm').addEventListener('submit', function(e) {
+                // Laisser le formulaire se soumettre naturellement vers Formspree
+                // Afficher le message de confirmation avant la soumission
+                document.getElementById('bookingSuccess').classList.remove('d-none');
+                
+                // Fermeture automatique après 2 secondes
+                setTimeout(() => {
+                    bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+                    document.getElementById('bookingSuccess').classList.add('d-none');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
