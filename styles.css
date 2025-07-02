@@ -1,0 +1,270 @@
+
+        body {
+            background-color: #111;
+            color: #E5E5E5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .header-section {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #E5E5E5;
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+        }
+        
+        .button-group {
+            margin-bottom: 30px;
+        }
+        
+        .button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 18px;
+            background-color: #FFD700;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .button:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            color: black;
+        }
+        
+        .button-secondary {
+            background-color: #333;
+            color: #FFD700;
+        }
+        
+        .button-secondary:hover {
+            background-color: #444;
+            color: #FFD700;
+        }
+        
+        .info-block {
+            background-color: #222;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            max-width: 600px;
+        }
+        
+        .horaires {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .modal-content {
+            background: #111;
+            color: #E5E5E5;
+            border: 2px solid #FFD700;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #FFD700;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 70vh;
+            border: none;
+        }
+        
+        .form-control, select.form-control {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #E5E5E5;
+            margin-bottom: 15px;
+        }
+        
+        .form-control:focus, select.form-control:focus {
+            background-color: #444;
+            border-color: #FFD700;
+            color: #E5E5E5;
+            box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+        }
+        
+        .form-control::placeholder {
+            color: #AAA;
+        }
+        
+        select.form-control option {
+            background-color: #333;
+            color: #E5E5E5;
+        }
+        
+        .btn-warning {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .modal-xl-custom {
+            max-width: 80vw;
+            width: auto;
+        }
+        
+        .recap-section {
+            background-color: #222;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .recap-title {
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .recap-item {
+            margin-bottom: 8px;
+            padding: 5px 0;
+            border-bottom: 1px solid #444;
+        }
+        
+        .recap-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: #FFD700;
+            margin-top: 15px;
+        }
+        
+        .recap-label {
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .pack-details {
+            font-size: 0.9em;
+            color: #CCC;
+            margin-top: 5px;
+        }
+        
+        .form-check-label {
+            font-size: 0.9rem;
+            color: #AAA;
+        }
+        
+        .form-check-input {
+            margin-top: 0.3rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .button {
+                width: 90%;
+                padding: 20px 15px;
+                font-size: 14px;
+            }
+            iframe {
+                height: 75vh;
+            }
+        }
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .button {
+                width: 85%;
+                padding: 18px 15px;
+                font-size: 15px;
+            }
+            iframe {
+                height: 65vh;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .button-group-horizontal {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            .button-group-horizontal .button {
+                width: 300px;
+                margin: 5px;
+            }
+        }
+
+        .tarifs-info { 
+            background: #222; 
+            border: 1px solid #FFD700; 
+            border-radius: 4px; 
+            padding: 10px; 
+            margin-bottom: 15px; 
+            text-align: left;
+          }
+          .tarifs-info ul { list-style: none; padding-left: 0; }
+          .tarifs-info li { margin: 4px 0; color: #E5E5E5; }
+
+          #pack-details {
+            font-size: 0.92em;
+            color: #CCC;
+            margin-top: 5px;
+            min-height: 1.5em;
+          }
+          
+          #date_range {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #E5E5E5;
+            margin-bottom: 15px;
+          }
+          
+          #date_range:focus {
+            background-color: #444;
+            border-color: #FFD700;
+            color: #E5E5E5;
+            box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+          }
+          
+          .formule-disabled {
+            pointer-events: auto;      /* Permet l'ouverture du select */
+            background-color: #333;
+            color: #E5E5E5;
+            opacity: 1;
+            cursor: pointer;
+          }
+          .formule-disabled:disabled {
+            /* Override pour garder aspect actif */
+            background-color: #333;
+            color: #E5E5E5;
+            opacity: 1;
+            cursor: pointer;
+          }
+          
